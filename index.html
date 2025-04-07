@@ -19,23 +19,23 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Головна</a>
+            <a class="nav-link  fs-5" href="#foodCarousel">Carousel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Рецепти</a>
+            <a class="nav-link  fs-5" href="#grid">Grid</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Про нас</a>
+            <a class="nav-link  fs-5" href="#card">Card</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Контакти</a>
+            <a class="nav-link  fs-5" href="#list">List</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container mb-5">
+  <div id="card" class="container mb-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card">
@@ -43,6 +43,7 @@
           <div class="card-body">
             <h5 class="card-title">Піца Маргарита</h5>
             <p class="card-text">Смачна піца з помідорами та моцарелою .</p>
+            <p class="card-text d-none">Це класичний рецепт, який швидко готується і підійде для вечірки або вечері.</p>
             <a href="#" class="btn btn-primary">Дізнатися більше</a>
           </div>
         </div>
@@ -53,6 +54,7 @@
           <div class="card-body">
             <h5 class="card-title">Паста Карбонара</h5>
             <p class="card-text">Ніжна паста з беконом, яйцями та сиром пармезан.</p>
+            <p class="card-text d-none">Ця італійська страва готується без вершків, а її соус утворюється з яєць і сиру. Вона ідеально підходить для швидкого вечора в колі родини або друзів.</p>
             <a href="#" class="btn btn-primary">Дізнатися більше</a>
           </div>
         </div>
@@ -63,6 +65,7 @@
           <div class="card-body">
             <h5 class="card-title">Шоколадний торт</h5>
             <p class="card-text">Солодкий торт з насиченим шоколадним кремом.</p>
+            <p class="card-text d-none">Цей торт чудово підходить для святкових заходів або як десерт до чаю. Він поєднує в собі глибокий шоколадний смак і ніжну текстуру.</p>
             <a href="#" class="btn btn-primary">Дізнатися більше</a>
           </div>
         </div>
@@ -70,24 +73,24 @@
     </div>
   </div>
 
-  <div id="foodCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div id="foodCarousel" class="carousel slide mb-5" data-bs-ride="carousel" style="max-width: 80%; margin: 0 auto;">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Borscht_served.jpg/1200px-Borscht_served.jpg" class="d-block w-100" alt="Борщ">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Borscht_served.jpg/1200px-Borscht_served.jpg" class="d-block w-100" alt="Борщ" data-bs-toggle="popover" data-bs-content="Це традиційний український борщ з буряком, капустою та м'ясом." data-bs-placement="bottom">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
           <h5>Український борщ</h5>
           <p>Традиційна страва з буряком, м’ясом і сметаною</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://myastoriya.com.ua/upload/resize_cache/iblock/b49/1000_800_1/blq17yqdzqy4mgqx70nznlsbcefikemy.jpg" class="d-block w-100" alt="Вареники">
+        <img src="https://myastoriya.com.ua/upload/resize_cache/iblock/b49/1000_800_1/blq17yqdzqy4mgqx70nznlsbcefikemy.jpg" class="d-block w-100" alt="Вареники" data-bs-toggle="popover" data-bs-content="Смачні вареники з вишнею — класична українська страва." data-bs-placement="bottom">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
           <h5>Вареники з вишнею</h5>
           <p>Солодка страва, яка смакує і дорослим, і дітям</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2021/05/piece-of-apple-pie--2000x1200.jpg" class="d-block w-100" alt="Шарлотка">
+        <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2021/05/piece-of-apple-pie--2000x1200.jpg" class="d-block w-100" alt="Шарлотка" data-bs-toggle="popover" data-bs-content="Ароматна яблучна шарлотка — десерт, який чудово поєднується з чаєм." data-bs-placement="bottom">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
           <h5>Яблучна шарлотка</h5>
           <p>Ароматний десерт до чаю або кави</p>
@@ -103,30 +106,89 @@
       <span class="visually-hidden">Вперед</span>
     </button>
   </div>
-  <div class="container my-5">
+  
+  <div id="grid" class="container my-5">
     <h2 class="text-center mb-4">Корисні поради кухаря</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="p-3 border rounded shadow-sm h-100 bg-light">
+        <div class="p-3 border rounded shadow-sm h-100 bg-light advice" data-id="1">
           <h5>Сіль у киплячу воду</h5>
           <p>Додавайте сіль тільки після закипання води – так вона швидше закипить.</p>
+          <div class="additional-info" style="display: none;">
+            <p><strong>Додаткова інформація:</strong> Занадто раннє додавання солі уповільнює процес закипання води.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="p-3 border rounded shadow-sm h-100 bg-light">
+        <div class="p-3 border rounded shadow-sm h-100 bg-light advice" data-id="2">
           <h5>Гострий ніж – безпечний ніж</h5>
           <p>Гострі ножі зменшують ризик травм, бо потребують менше зусиль під час нарізання.</p>
+          <div class="additional-info" style="display: none;">
+            <p><strong>Додаткова інформація:</strong> Гострі ножі допомагають зробити точніші та рівніші нарізи.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="p-3 border rounded shadow-sm h-100 bg-light">
+        <div class="p-3 border rounded shadow-sm h-100 bg-light advice" data-id="3">
           <h5>Не мийте гриби у воді</h5>
           <p>Гриби вбирають воду як губка – краще їх протирати вологою серветкою.</p>
+          <div class="additional-info" style="display: none;">
+            <p><strong>Додаткова інформація:</strong> Якщо гриби не можна обробити сухим способом, швидко промийте їх під холодною водою, а потім висушіть.</p>
+          </div>
         </div>
+      </div>
+    </div>
+</div>
+
+  <div id="list" class="row mt-5">
+    <div class="col-4">
+      <div id="recipe-list" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#recipe1">Піца Маргарита</a>
+        <a class="list-group-item list-group-item-action" href="#recipe2">Паста Карбонара</a>
+        <a class="list-group-item list-group-item-action" href="#recipe3">Борщ український</a>
+        <a class="list-group-item list-group-item-action" href="#recipe4">Вареники з вишнею</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div data-bs-spy="scroll" data-bs-target="#recipe-list" data-bs-smooth-scroll="true" class="scrollspy-example p-3 bg-light rounded-2" style="height: 300px; overflow-y: scroll;" tabindex="0">
+        <h4 id="recipe1">Піца Маргарита</h4>
+        <p>
+          Піца Маргарита — це одна з найвідоміших італійських страв. Основою є тонке хрустке тісто, змащене ароматним соусом з помідорів, притрушене тертою моцарелою та прикрашене свіжим листям базиліку. За легендою, її створили на честь королеви Маргарити, і кольори піци символізують прапор Італії. Її смак — поєднання ніжності сиру, солодко-кислого соусу та свіжості зелені.
+        </p>
+        <p>
+          Ідеальна для вечері з друзями або легкої недільної трапези. Чудово поєднується з білим вином або лимонадом. Готується швидко, головне — якісні інгредієнти.
+        </p>
+        
+        <h4 id="recipe2">Паста Карбонара</h4>
+        <p>
+          Паста Карбонара — класика римської кухні. Готується з простих інгредієнтів: спагеті, бекон (гуанчале або панчетта), яйця, сир (частіше за все — пармезан або пекоріно), чорний перець. Без вершків, як думають багато хто — соус утворюється завдяки жовткам та сиру, які обволікають пасту при контакті з гарячою сковородою.
+        </p>
+        <p>
+          Це страва з насиченим смаком, ароматна, поживна й дуже смачна. Часто її подають з келихом червоного вина. Головне — не переварити пасту та швидко змішати зі соусом. Подається гарячою з додатковою порцією сиру зверху.
+        </p>
+        
+        <h4 id="recipe3">Борщ український</h4>
+        <p>
+          Борщ — національна гордість української кухні. Основними інгредієнтами є буряк, картопля, морква, капуста, томатна паста або свіжі помідори, цибуля, часник та м’ясо (часто свинина або яловичина). Ідеальним доповненням є ложка сметани та дрібка зелені. До борщу часто подають пампушки з часником.
+        </p>
+        <p>
+          Борщ буває червоний, зелений, холодний. Кожна господиня має свій секрет приготування. Вважається, що найсмачніший борщ — "на другий день", коли страва настоїться. Це не просто їжа — це частинка культури й традицій, які передаються з покоління в покоління.
+        </p>
+        
+        <h4 id="recipe4">Вареники з вишнею</h4>
+        <p>
+          Вареники — ще один символ української кулінарної спадщини. Вишневі — найпопулярніші серед солодких. Готуються з тіста на воді або кефірі, начинка — свіжі або морожені вишні з цукром. Іноді додають краплю крохмалю, щоб начинка не витікала.
+        </p>
+        <p>
+          Вареники подають зі сметаною, іноді поливають медом або вершковим маслом. Це страва з дитинства, що асоціюється з бабусиною кухнею, теплом і турботою. Вишні надають кисло-солодкого смаку, а сметана робить їх ніжними й соковитими. Ідеальні як на сніданок, так і на вечерю.
+        </p>
+        
       </div>
     </div>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
